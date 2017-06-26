@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="./main.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="word">
+        <h1>Your word to guess:</h1>
+        {{#word}}
+          <div class="letter">
+            <p>{{display}}</p>
+          </div>
+        {{/word}}
+      </div>
+
+      <div class="guesses">
+        <h3>You have {{guesses}} guesses left</h3>
+      </div>
+
+      <div class="keyboard">
+        {{#keys}}
+        <div class="key-row">
+          {{#row1}}
+          {{^guessed}}
+          <form action="/key" method="post">
+            <button class= "notGuessed" type="submit" name="key" value={{id}}>{{keyvalue}}</button>
+          </form>
+          {{/guessed}}
+          {{#guessed}}
+          <button type="button" name="button" class="guessed">{{keyvalue}}</button>
+          {{/guessed}}
+          {{/row1}}
+        </div>
+        <div class="key-row">
+          {{#row2}}
+          {{^guessed}}
+          <form action="/key" method="post">
+            <button class= "notGuessed" type="submit" name="key" value={{id}}>{{keyvalue}}</button>
+          </form>
+          {{/guessed}}
+          {{#guessed}}
+          <button type="button" name="button" class="guessed">{{keyvalue}}</button>
+          {{/guessed}}
+          {{/row2}}
+        </div>
+        <div class="key-row">
+          {{#row3}}
+          {{^guessed}}
+          <form action="/key" method="post">
+            <button class= "notGuessed" type="submit" name="key" value={{id}}>{{keyvalue}}</button>
+          </form>
+          {{/guessed}}
+          {{#guessed}}
+          <button type="button" name="button" class="guessed">{{keyvalue}}</button>
+          {{/guessed}}
+          {{/row3}}
+        </div>
+        {{/keys}}
+      </div>
+
+    </div>
+  </body>
+</html>

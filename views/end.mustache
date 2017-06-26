@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{{#win}}You won!{{/win}}{{^win}}You lost!{{/win}}</title>
+  </head>
+  <body>
+    {{#win}}
+    <h1>You won!</h1>
+    {{/win}}
+    {{^win}}
+    <h2>You lost!</h2>
+    {{/win}}
+
+    <h3>Play again?</h3>
+    <form action="/" method="post">
+      <button type="submit" name="playagain" value = 1>Yes</button>
+      <button type="submit" name="playagain" value = 0>No</button>
+    </form>
+  </body>
+</html>

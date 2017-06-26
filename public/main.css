@@ -1,0 +1,54 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.container{
+  width: 75vw;
+  margin: auto;
+  border: 2px solid green;
+}
+
+.word{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.word h1{
+  flex: 1 100%;
+}
+
+.letter{
+  margin: 5px;
+  font-size: 3em;
+}
+
+.keyboard{
+  width: 100%;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.keyboard button{
+  padding: 15px;
+  border: none;
+}
+
+.keyboard button:focus{
+  outline: none;
+}
+.guessed{
+  background-color: red;
+}
+
+.notGuessed {
+    background-color: green;
+}
+
+.key-row{
+  display: flex;
+  justify-content: center;
+}
